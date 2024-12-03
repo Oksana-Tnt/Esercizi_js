@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esercizio4</title>
+</head>
+<body>
+    <script>
+        const prodotti = [
+                { nome: "Laptop", prezzo: 1200, disponibile: true },
+                { nome: "Smartphone", prezzo: 800, disponibile: false },
+                { nome: "Tablet", prezzo: 400, disponibile: true },
+                { nome: "Auricolari", prezzo: 50, disponibile: true },
+                { nome: "Monitor", prezzo: 300, disponibile: false },
+                { nome: "Mouse", prezzo: 25, disponibile: true },
+            ];
+
+            
+            /* Esercizio 4
+                Elimina dall'array il prodotto "auricolari"
+            */
+
+            const newArray=prodotti.filter(prodotto=>prodotto.nome!=="Auricolari");
+            console.log(newArray);
+    </script>
+</body>
+</html>

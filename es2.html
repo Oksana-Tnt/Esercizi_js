@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esercizio2</title>
+</head>
+<body>
+    <script>
+        const prodotti = [
+                { nome: "Laptop", prezzo: 1200, disponibile: true },
+                { nome: "Smartphone", prezzo: 800, disponibile: false },
+                { nome: "Tablet", prezzo: 400, disponibile: true },
+                { nome: "Auricolari", prezzo: 50, disponibile: true },
+                { nome: "Monitor", prezzo: 300, disponibile: false },
+                { nome: "Mouse", prezzo: 25, disponibile: true },
+            ];
+
+           
+            /* Esercizio 2
+                Crea un nuovo array chiamato prodottiCostosi contenente solo i prodotti che costano più di 500 euro.
+            */
+
+            const prodottiCostosi=prodotti.filter(prodotto=>prodotto.prezzo>500);
+            
+            console.log(prodottiCostosi);
+    </script>
+</body>
+</html>

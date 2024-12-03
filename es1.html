@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esercizio1</title>
+</head>
+<body>
+    <script>
+        const prodotti = [
+                { nome: "Laptop", prezzo: 1200, disponibile: true },
+                { nome: "Smartphone", prezzo: 800, disponibile: false },
+                { nome: "Tablet", prezzo: 400, disponibile: true },
+                { nome: "Auricolari", prezzo: 50, disponibile: true },
+                { nome: "Monitor", prezzo: 300, disponibile: false },
+                { nome: "Mouse", prezzo: 25, disponibile: true },
+            ];
+
+            /* Esercizio 1
+                Crea un nuovo array chiamato prodottiDisponibili contenente solo i prodotti che sono disponibili.
+            */
+
+           const prodottiDisponibili= prodotti.filter(prodotto=>prodotto.disponibile);
+
+           console.log(prodottiDisponibili);
+    </script>
+</body>
+</html>
