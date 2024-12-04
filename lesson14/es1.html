@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+    <style>
+        #container{
+            display: flex;
+            flex-wrap: wrap;
+            gap:10px;
+        }
+    </style>
+    <div class="container text-center py-5" id="container">   
+        
+    </div>
+
+    <template>
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title"></h5>
+                <p class="card-text"></p>
+                <a href="#" class="btn btn-primary" id="button">Buy</a>
+            </div>
+        </div>
+    </template>
+    <script>
+        /* Esercizio
+        Ciclando l'array popola la pagina di card html.
+        Puoi utilizzare Bootstrap per essere più valoce.
+        Assegna colori diversi ai prodotti non disponibili.
+        */
+            const prodotti = [
+                { nome: "Laptop", prezzo: 1200, disponibile: true },
+                { nome: "Smartphone", prezzo: 800, disponibile: false },
+                { nome: "Tablet", prezzo: 400, disponibile: true },
+                { nome: "Auricolari", prezzo: 50, disponibile: true },
+                { nome: "Monitor", prezzo: 300, disponibile: false },
+                { nome: "Mouse", prezzo: 25, disponibile: true },
+            ];
+            
+            let container = document.getElementById("container");
+
+            prodotti.map(prodotto=>              
+              {
+                let item = document.createElement('div');
+                const cloneTemplate = document.querySelector('template')
+                const clone = cloneTemplate.content.cloneNode(true);
+                clone.querySelector('.card-title').innerText = prodotto.nome;
+                clone.querySelector('.card-text').innerText = "Price " + prodotto.prezzo;
+                if(!prodotto.disponibile){
+                   let button= clone.getElementById("button");
+                   button.innerText="disabled";
+                   button.classList.add("disabled");                    
+                }
+                item.append(clone);
+                container.append(item);
+            }
+            )
+
+    </script>
+</body>
+</html>
