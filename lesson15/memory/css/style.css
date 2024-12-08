@@ -1,0 +1,29 @@
+#memory {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: calc(25% - 2px);
+    aspect-ratio: 1/1;
+    text-align: center;
+    font-size: 5rem;
+    line-height: 120px;
+    border-radius: 5%;
+    border: 1px solid #000;
+    background-color: coral;
+    perspective: 400px;
+}
+
+.icon {
+    border: 1px solid #000;
+    background-color: coral;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    height: 100%;
+    transition: all 0.5s;
+}
+
+.card.show .icon {
+    transform: rotateY(0deg);
+}
