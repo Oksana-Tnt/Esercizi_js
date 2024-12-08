@@ -1,4 +1,3 @@
-// import { markupPopup } from "./templates/markup";
 
 const main = document.getElementById("main");
 
