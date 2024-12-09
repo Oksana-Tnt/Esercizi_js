@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Person{
+            constructor(name,surname,age){
+                this.name=name;
+                this.surname=surname;
+                this.age=age;
+            }
+
+            compareAge(newObj){
+                if(this.age > newObj.age){
+                    return `${this.name} is older than ${newObj.name}`
+                }else{
+                    return `${this.name} is yanger than ${newObj.name}`
+                }
+            }
+        }
+
+        const person1=new Person("Pol","Morgen", 30);
+        const person2=new Person("Anna", "Shmidt", 40)
+
+       const res= person1.compareAge(person2);
+       console.log(res)
+
+    </script>
+</body>
+</html>
