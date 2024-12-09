@@ -6,11 +6,13 @@ window.addEventListener("load", onLoadPopup);
 main.addEventListener("click", removePopup);
 
 
+//Load Popup
 function onLoadPopup() {
     if (getCookie("show")==="no") return;
     main.insertAdjacentHTML("beforeend", markupPopup());        
 }
 
+//Remove Popup
 function removePopup(e) {
 
     if (!e.target.classList.contains("btn-danger") && !e.target.classList.contains("btn-primary")) return;
