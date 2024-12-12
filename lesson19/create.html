@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/loader.css">
+</head>
+
+<body>
+
+    <header class="d-flex justify-content-center py-3">
+        <ul class="nav nav-pills">
+            <li class="nav-item"><a href="index.html" class="nav-link active" aria-current="page">Lista pizze</a></li>
+            <li class="nav-item"><a href="create.html" class="nav-link">Aggiungi pizza</a></li>
+        </ul>
+    </header>
+
+    <div class="container">
+
+        <h1>Aggiungi nuova pizza</h1>
+
+        <form id="create-form">
+
+            <input type="text" required class="form-control" placeholder="Gusto">
+            <input type="number" required class="form-control" placeholder="Prezzo">
+
+            <button class="btn btn-primary">Crea Pizza</button>
+
+        </form>
+
+    </div>
+
+    <script type="module" src="./js/create.js"></script>
+</body>
+
+</html>

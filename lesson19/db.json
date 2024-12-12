@@ -1,0 +1,24 @@
+{
+  "pizze": [
+    {
+      "gusto": "jjh",
+      "prezzo": 5,
+      "id": 3
+    },
+    {
+      "gusto": "dghdfhf",
+      "prezzo": 5,
+      "id": 4
+    },
+    {
+      "gusto": "dgdfg",
+      "prezzo": 6,
+      "id": 5
+    },
+    {
+      "gusto": "rete",
+      "prezzo": 5,
+      "id": 6
+    }
+  ]
+}
